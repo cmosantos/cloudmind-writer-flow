@@ -100,6 +100,7 @@ Initial functional version focused on workflow validation, prompt testing, and g
 
 ## Suggested project structure
 
+```bash
 cloudmind-writer-flow/
 ├─ prompts/
 │  ├─ agent-1-web-researcher.md
