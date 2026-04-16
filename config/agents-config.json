@@ -1,0 +1,76 @@
+{
+  "workflow_name": "CloudMind Writer Flow",
+  "language": "English",
+  "description": "Multi-agent workflow for researching, consolidating, writing, refining, translating, and generating visuals for technical articles with OpenAI.",
+  "main_input_fields": {
+    "topic": "string",
+    "language": "string",
+    "article_length": "short | medium | long",
+    "tone": "string"
+  },
+  "agents": [
+    {
+      "id": "agent_1",
+      "name": "Agent 1 - Web Researcher",
+      "purpose": "Research 3 trustworthy and relevant sources for the given topic.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "low",
+      "include_chat_history": true,
+      "tools": ["web_search"]
+    },
+    {
+      "id": "agent_2",
+      "name": "Agent 2 - Consolidator",
+      "purpose": "Consolidate the selected sources into a single clear foundation.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "low",
+      "include_chat_history": true,
+      "tools": []
+    },
+    {
+      "id": "agent_3",
+      "name": "Agent 3 - Summarizer",
+      "purpose": "Turn the consolidated material into a strategic summary for the article.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "low",
+      "include_chat_history": true,
+      "tools": []
+    },
+    {
+      "id": "agent_4",
+      "name": "Agent 4 - Writer",
+      "purpose": "Write the full technical article in Markdown.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "include_chat_history": true,
+      "tools": []
+    },
+    {
+      "id": "agent_5",
+      "name": "Agent 5 - Final Editor",
+      "purpose": "Refine the article and generate the editorial package for publication.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "include_chat_history": true,
+      "tools": []
+    },
+    {
+      "id": "agent_6",
+      "name": "Agent 6 - EN Translator",
+      "purpose": "Translate the final editorial package into English.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "include_chat_history": true,
+      "tools": []
+    },
+    {
+      "id": "agent_7",
+      "name": "Agent 7 - Image Generator",
+      "purpose": "Generate a professional cover image based on the editorial prompt.",
+      "model": "gpt-5.4",
+      "reasoning_effort": "low",
+      "include_chat_history": true,
+      "tools": ["image_generation"]
+    }
+  ]
+}
